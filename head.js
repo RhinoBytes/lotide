@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
-// only used to test if its working
+
 
 // head function that takes string as a arrgument
 let head = function(string) {
@@ -20,7 +20,7 @@ let head = function(string) {
   } else {
     return string[0];
   }
-}
+};
 
 // used to test if function is working properly
 assertEqual(head([5,6,7]), 5);
