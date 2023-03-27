@@ -13,7 +13,7 @@ const assertEqual = function(actual, expected) {
 
 let eqArrays = function(first, second) {
   return first.toString() === second.toString();
-}
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays([1, 2, 5], [1, 2, 3]), true);
