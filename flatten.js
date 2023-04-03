@@ -11,7 +11,7 @@ let assertArraysEqual = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
-
+// function that returns a given array of arrays as a singular array
 let flatten = function(arrays) {
   let newArray = [];
   for (let i = 0; i < arrays.length; i++) {

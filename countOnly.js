@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
+// function that returns the count of all items
 const countOnly = function(allItems, itemsToCount) {
   const results = [];
 
