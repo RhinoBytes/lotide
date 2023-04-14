@@ -1,8 +1,5 @@
 // function that comparest two arrays by converting them to strings
-let eqArrays = function(first, second) {
-  return first.toString() === second.toString();
-};
-
+const eqArrays = require('./eqArrays');
 // function that logs to console if the two compared arrays are equal
 let assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
@@ -11,7 +8,5 @@ let assertArraysEqual = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
-/*
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertArraysEqual(eqArrays([1, 2, 5], [1, 2, 3]), true);
-*/
+module.exports = assertArraysEqual;
+
