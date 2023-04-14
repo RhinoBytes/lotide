@@ -25,7 +25,7 @@ const assertEqual = function(actual, expected) {
 
 
 
-// function that compares two objects and returns boolian value 
+// function that compares two objects and returns boolian value
 const eqObjects = function(object1, object2) {
   // assign the keys of each function to a variable
   const keys1 = Object.keys(object1);
@@ -34,7 +34,7 @@ const eqObjects = function(object1, object2) {
   if (keys1.length !== keys2.length) {
     return false;
   }
-  // loop through keys1 
+  // loop through keys1
   for (const key of keys1) {
     const val1 = object1[key];
     const val2 = object2[key];
