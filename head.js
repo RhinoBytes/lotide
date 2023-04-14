@@ -1,15 +1,4 @@
-// Function Implementation
-
-const assertEqual = function(actual, expected) {
-  //if true print green check marks
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  // if false print red stop symbols
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
+const assertEqual = require(`./assertEqual`);
 
 // head function that takes string as a arrgument
 let head = function(string) {
@@ -22,6 +11,3 @@ let head = function(string) {
   }
 };
 
-// used to test if function is working properly
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
