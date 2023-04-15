@@ -36,3 +36,5 @@ let result1 = findKey({
 
 // asserting that the result of the findkey function matches the expected value
 assertEqual(result1, "noma");
+
+module.exports = findKey;

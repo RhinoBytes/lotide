@@ -1,15 +1,3 @@
-// Function Implementation
-
-const assertEqual = function(actual, expected) {
-  //if true print green check marks
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  // if false print red stop symbols
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
 // functions that adds up number of letters used and stores the results in the results object
 const countLetters = function(string) {
   // remove spaces from string and joins the strings together
@@ -29,21 +17,26 @@ const countLetters = function(string) {
   
   return results;
 };
-
-
-// tests if functions is working using the assertEqual function
-const result2 = countLetters('lighthouse labs');
-assertEqual(result2["l"], 2);
-assertEqual(result2["i"], 1);
-assertEqual(result2["g"], 1);
-assertEqual(result2["h"], 2);
-assertEqual(result2["o"], 1);
-assertEqual(result2["u"], 1);
-assertEqual(result2["s"], 2);
-assertEqual(result2["e"], 1);
-assertEqual(result2["a"], 1);
-assertEqual(result2["b"], 1);
+// add a way to convert the string to undercase eltters 
+// add test for letter that doesn't appear in object 
+module.exports = countLetters;
 
 
 
 
+const testOneSentence = "lighthouse in the house";
+const testOneActualResult = countLetters(testOneSentence);
+const testOneExpectedResult = {
+  l: 1,
+  i: 2,
+  g: 1,
+  h: 4,
+  t: 2,
+  o: 2,
+  u: 2,
+  s: 2,
+  e: 3,
+  n: 1,
+};
+
+assertEqual(testOneActualResult["h"], testOneExpectedResult["h"]);

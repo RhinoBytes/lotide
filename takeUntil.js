@@ -43,3 +43,6 @@ const results3 = ["I've", "been", "to", "Hollywood"];
 console.log(results2);
 
 assertArraysEqual(eqArrays(results2, results3), true);
+
+
+module.exports = takeUntil;

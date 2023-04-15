@@ -1,6 +1,4 @@
-const assertArraysEqual = require("../assertArraysEqual");
 const map = require("../map");
-const eqArrays = require("../eqArrays");
 const assert = require('chai').assert;
 
 

@@ -1,5 +1,3 @@
-
-
 // head function that takes string as a arrgument
 let head = function(arr) {
   //checks if string is empty

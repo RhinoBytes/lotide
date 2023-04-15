@@ -9,8 +9,5 @@ const assertEqual = function(actual, expected) {
     console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
-// only used to test if its working
-/* assertEqual(7, 3);
-assertEqual("1", "1");
- */
+
 module.exports = assertEqual;
