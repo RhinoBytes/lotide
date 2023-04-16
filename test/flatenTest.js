@@ -1,18 +1,22 @@
 let flatten = require('../flatten');
 let assert = require('chai').assert;
 
-describe("#flatten", () => {
-  it("returns [1, 2, 3, 4, 5, 6] for [1, 2, [3, 4], 5, [6]", () => {
-    assert.deepEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+describe('flatten', () => {
+  it('should flatten an array of arrays into a singular array', () => {
+    const input = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    const expectedOutput = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    assert.deepEqual(flatten(input), expectedOutput);
   });
-  it("returns [] for []", () => {
-    assert.deepEqual(flatten([]), []); 
+
+  it('should return an empty array for an empty input array', () => {
+    const input = [];
+    const expectedOutput = [];
+    assert.deepEqual(flatten(input), expectedOutput);
   });
-  it("returns ['hi', 2] for ['hi', [2]", () => {
-    assert.deepEqual(flatten(["hi", [2]]), ["hi", 2]); 
-  });
-  it("returns undefined for 42", () => {
-    assert.deepEqual(flatten(42), undefined); 
+
+  it('should return undefined for an input that is not an array', () => {
+    const input = 'not an array';
+    const expectedOutput = undefined;
+    assert.strictEqual(flatten(input), expectedOutput);
   });
 });
-

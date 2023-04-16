@@ -8,6 +8,13 @@ describe("#countLetters", () => {
   it("returns letter counts for 'lab'", () => {
     assert.deepEqual(countLetters("lab"), { l: 1, a: 1, b: 1 }); 
   });
+  it("returns an empty object for an empty string", () => {
+    assert.deepEqual(countLetters(""), {}); 
+  });
+
+  it("treats small and big letters as distinct characters", () => {
+    assert.deepEqual(countLetters("aAaA"), { a: 2, A: 2 }); 
+  });
 });
 
 

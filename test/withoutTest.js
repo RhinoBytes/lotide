@@ -7,12 +7,12 @@ describe("#without", () => {
     assert.deepEqual(without([1, 2, 3], [2, 3]), [1]);
   });
   it("returns [] for [] and []", () => {
-    assert.deepEqual(without([], []), []); 
+    assert.deepEqual(without([], []), []);
   });
   it("returns undefined for 2, [2]", () => {
-    assert.deepEqual(without(2, [2]), undefined); 
+    assert.deepEqual(without(2, [2]), undefined);
   });
   it("returns undefined for 42", () => {
-    assert.deepEqual(without(42), undefined); 
+    assert.deepEqual(without(42), undefined);
   });
 });

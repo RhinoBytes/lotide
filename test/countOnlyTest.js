@@ -1,24 +1,22 @@
 const countOnly = require("../countOnly")
 const assert = require('chai').assert;
 
+describe('countOnly', () => {
+  // Test case 1: Check if countOnly returns correct counts for given items
+  it('should return correct counts for given items', () => {
+    const allItems = ['a', 'b', 'c', 'a', 'b', 'c', 'd', 'a'];
+    const itemsToCount = { 'a': true, 'b': true, 'c': true };
+    const expectedCounts = { 'a': 3, 'b': 2, 'c': 2 };
+    const actualCounts = countOnly(allItems, itemsToCount);
+    assert.deepEqual(actualCounts, expectedCounts);
+  });
 
-
-
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+  // Test case 2: Check if countOnly returns an empty object for empty input arrays
+  it('should return an empty object for empty input arrays', () => {
+    const allItems = [];
+    const itemsToCount = { 'a': true, 'b': true, 'c': true };
+    const expectedCounts = {};
+    const actualCounts = countOnly(allItems, itemsToCount);
+    assert.deepEqual(actualCounts, expectedCounts);
+  });
+});

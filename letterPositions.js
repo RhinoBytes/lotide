@@ -1,18 +1,3 @@
-let eqArrays = function(first, second) {
-  return first.toString() === second.toString();
-};
-
-// function that logs to console if the two compared arrays are equal
-let assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🔴🔴🔴 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
-
-
-
 //this function takes a string as input and returns an object that
 //contains the indices of each character in the string, excluding spaces
 const letterPositions = function(sentence) {

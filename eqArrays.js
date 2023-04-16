@@ -11,7 +11,7 @@ let eqArrays = function(first, second) {
     }
   }
   return true;
- 
+
 };
 
 module.exports = eqArrays;

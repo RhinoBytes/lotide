@@ -1,7 +1,7 @@
 // function that returns a given array of arrays as a singular array
 let flatten = function(arrays) {
   if (!Array.isArray(arrays)) {
-    return undefined; 
+    return undefined;
   }
   let newArray = [];
   for (let i = 0; i < arrays.length; i++) {
