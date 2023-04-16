@@ -11,11 +11,11 @@ const letterPositions = require("./letterPositions");
 const map = require("./map");
 const takeUntil = require("./takeUntil");
 const without = require("./without");
-const assertArraysEqual = require('../assertArraysEqual');
-const assertEqual = require('../assertEqual');
-const assertObjectsEqual = require('../assertObjectsEqual');
-const eqArrays = require('../eqArrays');
-const eqObjects = require('../eqObjects');
+const assertArraysEqual = require('./assertArraysEqual');
+const assertEqual = require('./assertEqual');
+const assertObjectsEqual = require('./assertObjectsEqual');
+const eqArrays = require('./eqArrays');
+const eqObjects = require('./eqObjects');
 // export
 module.exports = {
   head,
